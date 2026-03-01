@@ -1,4 +1,4 @@
-![MLOps CI Pipeline](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml/badge.svg)
+![MLOps CI Pipeline](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml/badge.svg?branch=main)
 
 Project: Store Sales Forecasting - Model-as-a-Service (MaaS)
 🎯 Objective
