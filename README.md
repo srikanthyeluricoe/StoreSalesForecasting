@@ -1,3 +1,5 @@
+![MLOps CI Pipeline](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml/badge.svg)
+
 Project: Store Sales Forecasting - Model-as-a-Service (MaaS)
 🎯 Objective
 To transition a Time-Series Forecasting model (trained on the Kaggle Store Sales dataset) into a Production-Ready Inference Service. This project demonstrates the "Last Mile" of Machine Learning: moving from a notebook to a governed, containerized API.
