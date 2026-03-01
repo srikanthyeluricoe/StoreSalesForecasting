@@ -1,10 +1,14 @@
 - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install flake8  # <--- Add this line
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        pip install -r requirements.txt
 
     - name: Run Linting
       run: |
-        # This will now work because flake8 is installed
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Using 'python -m' avoids the "command not found" 127 error
+        python -m flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        
+    - name: Run Security Scan (Bonus for VP Role)
+      run: |
+        pip install bandit
+        python -m bandit -r . -x ./tests
