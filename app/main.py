@@ -10,6 +10,7 @@ Instrumentator().instrument(app).expose(app, endpoint="/metrics")
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 
+
 @app.post("/predict")
 async def predict(features: dict):
     # The instrumentator automatically tracks latency and status codes for this route
