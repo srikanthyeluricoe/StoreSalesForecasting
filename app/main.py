@@ -1,5 +1,5 @@
 import logging
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
 from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI(title="Store Sales MLOps API")
