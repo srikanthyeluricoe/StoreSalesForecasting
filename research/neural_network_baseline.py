@@ -4,7 +4,7 @@ from sklearn.model_selection import train_test_split
 import pandas as pd
 
 # 1. Load Data
-df = pd.read_csv('data/train.csv').head(1000) # Small sample for demo
+df = pd.read_csv('data/train.csv').head(1000)  # Small sample for demo
 X = df[['onpromotion', 'store_nbr']]
 y = df['sales']
 
