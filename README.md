@@ -1,4 +1,4 @@
-[![.github/workflows/main.yml](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml/badge.svg)](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml)
+[![.github/workflows/main.yml](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/srikanthyeluricoe/StoreSalesForecasting/actions/workflows/main.yml)
 
 Project: Store Sales Forecasting - Model-as-a-Service (MaaS)
 🎯 Objective
