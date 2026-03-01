@@ -1,16 +1,35 @@
-- name: Install dependencies
+name: CI  # This MUST match the name in your Badge URL
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.11"
+
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run Linting
       run: |
-        # --exit-zero makes the build pass even if there are small "Style" warnings
-        # but --select=E9,F63,F7,F82 still fails if there is a CRITICAL logic error
+        # Critical errors fail the build, style warnings are logged but allowed (--exit-zero)
         python -m flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         python -m flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
         
-    - name: Run Security Scan (Bonus for VP Role)
+    - name: Run Security Scan
       run: |
         pip install bandit
         python -m bandit -r . -x ./tests
