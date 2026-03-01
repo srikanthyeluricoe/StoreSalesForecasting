@@ -3,13 +3,29 @@ Project: Store Sales Forecasting - Model-as-a-Service (MaaS)
 To transition a Time-Series Forecasting model (trained on the Kaggle Store Sales dataset) into a Production-Ready Inference Service. This project demonstrates the "Last Mile" of Machine Learning: moving from a notebook to a governed, containerized API.
 
 🛠 Tech Stack
-ML Engine: Python, Scikit-Learn, Pandas (Time-Series Feature Engineering).
+ML Engines: Facebook Prophet (Time-Series), Scikit-Learn (Linear Regression & Neural Networks).
+
+Observability: Prometheus & Grafana (Real-time RED metrics: Requests, Errors, Duration).
+
+Security: Secure JSON Serialization for model persistence (replacing insecure pickles).
 
 API Layer: FastAPI (High-performance, asynchronous).
 
 Governance Integration: Designed for Kong Gateway / MuleSoft (Authentication, Rate-limiting, and Logging).
 
 Infrastructure: Docker, Kubernetes-ready.
+
+🧠 Advanced ML Capabilities
+Multi-Model Architecture: Supports baseline Linear Regression for explainability and Multi-Layer Perceptrons (Neural Networks) for non-linear pattern recognition.
+
+Feature Scaling: Integrated StandardScaler pipelines to ensure gradient descent convergence for deep learning layers.
+
+Validation: Optimized for RMSLE to handle retail volatility and log-transformed target variables.
+
+📊 Observability & Monitoring
+Live Telemetry: Integrated Prometheus middleware to expose /metrics for production monitoring.
+
+Health Checks: Automated startup events to load models into memory, ensuring zero-latency "cold starts" for the API.
 
 🏗 Architecture
 Instead of a monolithic script, this project follows a Microservices pattern:
