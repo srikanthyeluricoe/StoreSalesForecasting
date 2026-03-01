@@ -18,6 +18,7 @@ async def predict(features: dict):
     logging.info(f"Prediction_Logged | Value: {prediction}")
     return {"prediction": prediction}
 
+
 @app.get("/health")
 async def health():
     return {"status": "healthy"}
