@@ -22,3 +22,5 @@ async def predict(features: dict):
 @app.get("/health")
 async def health():
     return {"status": "healthy"}
+
+#Final Prodcution Build check
