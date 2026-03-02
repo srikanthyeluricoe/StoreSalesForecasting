@@ -1,0 +1,24 @@
+# Python / ML essentials
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+
+# Data and Large Files (Crucial for Sales Forecasting)
+*.csv
+*.parquet
+*.xlsx
+data/
+outputs/
+models/*.pkl
+models/*.h5
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Docker (prevents local config from leaking)
+.dockerignore
